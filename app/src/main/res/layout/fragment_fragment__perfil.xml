@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Perfil"
+    android:background="@color/icons"
+    >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/fondo_secundario"
+            android:background="@drawable/fondo2"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/fondo_perfil"
+          android:layout_margin="25dp"
+          android:orientation="vertical"
+          android:layout_gravity="center_vertical"
+          android:padding="20dp">
+
+              <ImageView
+                  android:layout_marginTop="40dp"
+                  android:layout_width="318dp"
+                  android:layout_height="161dp"
+                  android:src="@drawable/icon_user" />
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:layout_margin="20dp"
+                  android:background="@color/colorPrimaryDark">
+
+              </View>
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_margin="10dp"
+                  android:gravity="center">
+
+
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Yanela Alexandra Pachacama Quispe"
+                          android:layout_margin="10dp"
+                          android:textSize="14dp"
+                          android:textStyle="bold"
+                          android:textColor="#000000"
+                          android:drawableStart="@mipmap/ic_name_user"/>
+
+
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="ypachacamaq@gmail.com"
+                          android:layout_margin="10dp"
+                          android:textSize="14dp"
+                          android:textStyle="bold"
+                          android:textColor="#000000"
+                          android:drawableStart="@mipmap/ic_email_user"/>
+
+
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="19"
+                          android:layout_margin="10dp"
+                          android:textSize="14dp"
+                          android:textStyle="bold"
+                          android:textColor="#000000"
+                          android:drawableStart="@mipmap/ic_age_user"/>
+
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="08/08/1999"
+                          android:layout_margin="10dp"
+                          android:textSize="14dp"
+                          android:textStyle="bold"
+                          android:textColor="#000000"
+                          android:drawableStart="@mipmap/ic_birthday_user"/>
+
+              </LinearLayout>
+
+
+
+
+
+      </LinearLayout>
+
+</FrameLayout>
