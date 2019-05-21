@@ -34,13 +34,13 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+
                     return true;
             }
             return false;
@@ -106,6 +106,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 removerFragment("Fragment_Perfil");
                 removerFragment("Fragment_Noticias");
                 removerFragment("Fragment_Eventos");
+                removerFragment("Fragment_Menu");
+                removerFragment("Fragment_Reserva");
 
 
             }
@@ -122,8 +124,15 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             }else if (id== R.id.nav_not){
 
                 fragmentManager.beginTransaction().replace(R.id.container, new Fragment_Noticias(), "Fragment_Eventos").commit();
+            } else if (id == R.id.nav_menu){
 
-        }
+                fragmentManager.beginTransaction().replace(R.id.container, new Fragment_Menu(), "Fragment_Menu").commit();
+
+            } else if (id == R.id.nav_reservas){
+
+                fragmentManager.beginTransaction().replace(R.id.container, new Fragment_Reservas(), "Fragment_Reserva").commit();
+
+            }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

@@ -3,7 +3,7 @@
     <string name="title_activity_menu2"></string>
     <string name="title_home">Inicio</string>
     <string name="title_dashboard">Favoritos</string>
-    <string name="title_notifications">Guardados</string>
+    <string name="title_notifications">Reservados</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

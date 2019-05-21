@@ -3,48 +3,36 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    tools:context=".MenuActivity"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_secundario"
+        android:background="@drawable/fondo2"/>
 
     <android.support.constraint.ConstraintLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MenuActivity"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/fondo_secundario"
-            android:background="@drawable/fondo2"/>
-
-        <TextView
-            android:id="@+id/message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/title_home"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:background="@color/rosa"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:menu="@menu/bottom_nav_menu" />
+        >
 
     </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/rosa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 
 </android.support.constraint.ConstraintLayout>
