@@ -22,8 +22,7 @@
             android:background="@color/rosa"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <include layout="@layout/content_home" />
-
+        <include layout="@layout/content_home"/>
 
     </android.support.design.widget.AppBarLayout>
 

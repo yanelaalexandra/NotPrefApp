@@ -4,37 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single" android:id="@+id/grp1">
 
         <item
             android:id="@+id/nav_inicio"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@mipmap/ic_inicio_dl"
             android:title="Inicio" />
 
         <item
             android:id="@+id/nav_perfil"
-            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:icon="@mipmap/ic_usuario_dl"
             android:title="Perfil" />
 
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/grp2">
 
         <item
             android:id="@+id/nav_not"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@mipmap/ic_noticia_dl"
             android:title="Noticias" />
 
         <item
             android:id="@+id/nav_even"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@mipmap/ic_evento_dl"
             android:title="Eventos" />
+
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/grp3">
 
         <item
             android:id="@+id/nav_menu"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@mipmap/ic_menu_dl"
             android:title="Menú" />
 
         <item
             android:id="@+id/nav_reservas"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@mipmap/ic_reservas_dl"
             android:title="Reservas" />
     </group>
 

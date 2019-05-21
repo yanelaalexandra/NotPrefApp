@@ -27,8 +27,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
 
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -108,7 +107,6 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 removerFragment("Fragment_Eventos");
                 removerFragment("Fragment_Menu");
                 removerFragment("Fragment_Reserva");
-
 
             }
             else if (id == R.id.nav_perfil){
