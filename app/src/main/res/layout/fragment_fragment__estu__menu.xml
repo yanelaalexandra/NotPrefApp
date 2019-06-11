@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Estu_Menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menú Estudiantil"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:textAlignment="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_perfil"
+            android:layout_margin="30dp"
+            >
+
+            <TextView
+                android:id="@+id/titulo_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Martes 28"
+                android:textAlignment="center"
+                android:textColor="@color/icons"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+
+            <LinearLayout
+                android:layout_below="@id/titulo_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="ENTRADA"
+                   android:textSize="18dp"
+                   android:textColor="@color/negro"
+                   android:textStyle="bold|italic"
+                   />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Papa a la huancaína"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/negro"
+                    android:layout_margin="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SEGUNDO"
+                    android:textSize="18dp"
+                    android:textColor="@color/negro"
+                    android:textStyle="bold|italic"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estofado de Pollo"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/negro"
+                    android:layout_margin="20dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lentejas con asado de carne"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/negro"
+                    android:layout_margin="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BEBIDA"
+                    android:textSize="18dp"
+                    android:textColor="@color/negro"
+                    android:textStyle="bold|italic"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Refresco de Maracuyá"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/negro"
+                    android:layout_margin="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="POSTRE"
+                    android:textSize="18dp"
+                    android:textColor="@color/negro"
+                    android:textStyle="bold|italic"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gelatina"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/negro"
+                    android:layout_margin="20dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_icon"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

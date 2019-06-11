@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_estu_menu"
+        android:icon="@mipmap/ic_estudiante"
+        android:title="Estudiantil" />
+
+    <item
+        android:id="@+id/navigation_eje_menu"
+        android:icon="@mipmap/ic_ejecutivo"
+        android:title="Ejecutivo" />
+
+</menu>

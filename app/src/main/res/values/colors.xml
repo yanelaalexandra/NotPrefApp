@@ -10,4 +10,8 @@
     <color name="divider">#BDBDBD</color>
     <color name="azul">#4267B1</color>
     <color name="rosa">#FD9898</color>
+    <color name="card_evento">#993692F4</color>
+    <color name="card_noticia">#99F44336</color>
+    <color name="negro">#000000</color>
+    <color name="card_des">#99000000</color>
 </resources>

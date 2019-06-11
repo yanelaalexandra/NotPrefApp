@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_fav_noticias"
+        android:icon="@mipmap/ic_fav"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_reser_noticias"
+        android:icon="@mipmap/ic_reservado"
+        android:title="@string/title_notifications" />
+
+</menu>

@@ -22,41 +22,17 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
     private static final String TAG = "A";
 
-    private TextView mTextMessage;
-
     private DrawerLayout drawerLayout;
-
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-
-                    return true;
-                case R.id.navigation_dashboard:
-
-                    return true;
-                case R.id.navigation_notifications:
-
-                    return true;
-            }
-            return false;
-        }
-    };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
-        mTextMessage = findViewById(R.id.message);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
 
@@ -80,7 +56,15 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        fragmentManager.beginTransaction().replace(R.id.container, new Fragment_Inicio(), "Fragment_Noticias").commit();
+
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -102,22 +86,16 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
             if ( id == R.id.nav_inicio) {
 
-                removerFragment("Fragment_Perfil");
-                removerFragment("Fragment_Noticias");
-                removerFragment("Fragment_Eventos");
-                removerFragment("Fragment_Menu");
-                removerFragment("Fragment_Reserva");
+                fragmentManager.beginTransaction().replace(R.id.container, new Fragment_Inicio(), "Fragment_Noticias").commit();
 
             }
             else if (id == R.id.nav_perfil){
 
-                //Fragment para el perfil de usuario
                 fragmentManager.beginTransaction().replace(R.id.container, new Fragment_Perfil(), "Fragment_Perfil").commit();
-                Toast.makeText(MenuActivity.this, "PERFIL", Toast.LENGTH_SHORT).show();
 
             }else if (id == R.id.nav_even){
 
-                fragmentManager.beginTransaction().replace(R.id.container, new Fragment_Noticias(), "Fragment_Noticias").commit();
+                fragmentManager.beginTransaction().replace(R.id.container, new Fragment_Eventos(), "Fragment_Noticias").commit();
 
             }else if (id== R.id.nav_not){
 
