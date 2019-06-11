@@ -51,9 +51,6 @@ public class Fragment_Inicio2 extends Fragment {
 
 
         // Inflate the layout for this fragment
-
-
-
         initialize();
 
         return view;

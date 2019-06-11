@@ -7,8 +7,26 @@ public class Actividad {
     String estado;
     String evento;
     String fecha;
+    String fechaEvento;
     String hora;
     String titulo;
+    String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getFechaEvento() {
+        return fechaEvento;
+    }
+
+    public void setFechaEvento(String fechaEvento) {
+        this.fechaEvento = fechaEvento;
+    }
 
     public String getContenido() {
         return contenido;

@@ -9,7 +9,7 @@
     android:layout_gravity="center">
 
     <TextView
-        android:id="@+id/txtclose"
+        android:id="@+id/txtclose_res"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:textColor="@color/icons"
@@ -25,7 +25,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/titulo_popup"
+            android:id="@+id/titulo_popup_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TITULO NOTICIA O EVENTO"
@@ -58,7 +58,7 @@
 
 
             <TextView
-                android:id="@+id/desc_evento"
+                android:id="@+id/desc_evento_res"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Descripcion"
@@ -68,7 +68,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/fecha_creacion"
+                android:id="@+id/fecha_creacion_res"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fecha"
@@ -79,14 +79,16 @@
                 android:layout_margin="10dp"/>
 
             <TextView
-                android:id="@+id/hora_creacion"
+                android:id="@+id/hora_creacion_res"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:textColor="@color/icons"
+                android:textColor="#921E1E"
                 android:textStyle="bold"
                 android:textAlignment="textStart"
                 android:layout_margin="10dp"/>
+
+
 
 
         </LinearLayout>
@@ -97,36 +99,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_fav"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/icons"
-            android:drawableLeft="@mipmap/ic_fav"
-            android:layout_margin="20dp"
-            android:text="FAVORITO"
-            android:padding="10dp"
-            android:textSize="18dp"
-            android:background="@drawable/buttons_card_popup"/>
-
-        <Button
-            android:id="@+id/btn_reser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/icons"
-            android:text="Reservado"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:textSize="18dp"
-            android:drawableLeft="@mipmap/ic_reservado"
-            android:background="@drawable/buttons_card_popup"/>
-
-
+            android:gravity="center"
+            android:textColor="#312424"
+            android:textSize="15dp"
+            android:text="El Evento ha sido reservado con éxito"/>
 
     </LinearLayout>
 

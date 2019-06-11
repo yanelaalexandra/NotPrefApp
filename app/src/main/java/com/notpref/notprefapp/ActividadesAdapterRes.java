@@ -7,13 +7,11 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,13 +20,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.ViewHolder> {
+public class ActividadesAdapterRes extends RecyclerView.Adapter<ActividadesAdapterRes.ViewHolder> {
 
 
     private List<Actividad> actividads;
     Context ctx;
 
-    public ActividadesAdapter(){
+    public ActividadesAdapterRes(){
         this.actividads = new ArrayList<>();
     }
 
@@ -57,7 +55,7 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
 
     @NonNull
     @Override
-    public ActividadesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public ActividadesAdapterRes.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_cardview, viewGroup, false);
 
@@ -67,7 +65,7 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ActividadesAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull ActividadesAdapterRes.ViewHolder viewHolder, int i) {
 
         final Actividad actividad = this.actividads.get(i);
         final Dialog myDialog;
@@ -85,53 +83,33 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
 
         if(actividad.getEvento().equals("true")){
 
-
-
-
-
-            Call<ResponseMessage> call = service.contadorVistas(uuid);
-            call.enqueue(new Callback<ResponseMessage>() {
-                @Override
-                public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
-
-                }
-
-                @Override
-                public void onFailure(Call<ResponseMessage> call, Throwable t) {
-
-                }
-            });
-
-
             viewHolder.tipo_actividad.setText("Evento");
             viewHolder.titulo_actividad.setTextColor(Color.parseColor("#993692F4"));
             //viewHolder.tipo_actividad.setTextColor(Color.parseColor("#993692F4"));
             //viewHolder.cardView.setBackgroundResource(R.color.card_evento);
-
 
             viewHolder.titulo_actividad.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     TextView txtclose, titulo, contenido, fecha, hora;
                     Button btnFollow;
-                    myDialog.setContentView(R.layout.card_popup);
-                    txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
-                    titulo = myDialog.findViewById(R.id.titulo_popup);
-                    contenido = myDialog.findViewById(R.id.desc_evento);
-                    hora = myDialog.findViewById(R.id.hora_creacion);
-                    fecha = myDialog.findViewById(R.id.fecha_creacion);
+                    myDialog.setContentView(R.layout.card_popup_reservado);
+                    txtclose =(TextView) myDialog.findViewById(R.id.txtclose_res);
+                    titulo = myDialog.findViewById(R.id.titulo_popup_res);
+                    contenido = myDialog.findViewById(R.id.desc_evento_res);
+                    hora = myDialog.findViewById(R.id.hora_creacion_res);
+                    fecha = myDialog.findViewById(R.id.fecha_creacion_res);
 
-                    Button btnFavorito = myDialog.findViewById(R.id.btn_fav);
-                    Button btnReservado = myDialog.findViewById(R.id.btn_fav);
+                    //Button btnFavorito = myDialog.findViewById(R.id.btn_fav);
+                    //Button btnReservado = myDialog.findViewById(R.id.btn_fav);
 
                     txtclose.setText("X");
                     titulo.setText(titulo2);
                     contenido.setText(descripcion);
-                    hora.setText(hora_creacion);
+                    //hora.setText(hora_creacion);
                     fecha.setText(fecha_creacion);
 
-
-
+/*
                     btnFavorito.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -169,7 +147,7 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
                             });
                         }
                     });
-
+*/
 
                     txtclose.setOnClickListener(new View.OnClickListener() {
                         @Override
