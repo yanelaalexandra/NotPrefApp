@@ -34,8 +34,6 @@ public class ActividadesAdapterRes extends RecyclerView.Adapter<ActividadesAdapt
         this.actividads = productos;
     }
 
-
-
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView titulo_actividad, tipo_actividad;
@@ -97,7 +95,7 @@ public class ActividadesAdapterRes extends RecyclerView.Adapter<ActividadesAdapt
                     txtclose =(TextView) myDialog.findViewById(R.id.txtclose_res);
                     titulo = myDialog.findViewById(R.id.titulo_popup_res);
                     contenido = myDialog.findViewById(R.id.desc_evento_res);
-                    hora = myDialog.findViewById(R.id.hora_creacion_res);
+                    //hora = myDialog.findViewById(R.id.hora_creacion_res);
                     fecha = myDialog.findViewById(R.id.fecha_creacion_res);
 
                     //Button btnFavorito = myDialog.findViewById(R.id.btn_fav);
@@ -109,7 +107,7 @@ public class ActividadesAdapterRes extends RecyclerView.Adapter<ActividadesAdapt
                     //hora.setText(hora_creacion);
                     fecha.setText(fecha_creacion);
 
-/*
+                    /*
                     btnFavorito.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

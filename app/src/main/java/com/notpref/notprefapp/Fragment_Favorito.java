@@ -38,8 +38,6 @@ public class Fragment_Favorito extends Fragment {
         actividadesList.setLayoutManager(new LinearLayoutManager(getContext()));
         actividadesList.setAdapter(new ActividadesAdapterFav());
 
-
-
         // Inflate the layout for this fragment
         initialize();
 

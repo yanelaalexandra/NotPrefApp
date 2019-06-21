@@ -9,7 +9,7 @@
     android:layout_gravity="center">
 
     <TextView
-        android:id="@+id/txtclose"
+        android:id="@+id/txtclose_fav"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:textColor="@color/icons"
@@ -79,6 +79,17 @@
                 android:layout_margin="10dp"/>
 
             <TextView
+                android:id="@+id/lugar_creacion_fav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textSize="18sp"
+                android:textColor="@color/icons"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_margin="10dp"/>
+
+            <TextView
                 android:id="@+id/hora_creacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,8 +109,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-
 
         <Button
             android:id="@+id/btn_reser_fav"

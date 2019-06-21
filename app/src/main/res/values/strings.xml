@@ -22,4 +22,6 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+    <string name="facebook_app_id">2204102919644039</string> <string name="fb_login_protocol_scheme">fb2204102919644039</string>
+
 </resources>

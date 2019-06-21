@@ -34,8 +34,6 @@ public class ActividadesAdapterFav extends RecyclerView.Adapter<ActividadesAdapt
         this.actividads = productos;
     }
 
-
-
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView titulo_actividad, tipo_actividad;
@@ -113,11 +111,11 @@ public class ActividadesAdapterFav extends RecyclerView.Adapter<ActividadesAdapt
                     TextView txtclose, titulo, contenido, fecha, hora;
                     Button btnFollow;
                     myDialog.setContentView(R.layout.card_popup_favorito);
-                    txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
-                    titulo = myDialog.findViewById(R.id.titulo_popup_res);
-                    contenido = myDialog.findViewById(R.id.desc_evento_res);
-                    hora = myDialog.findViewById(R.id.hora_creacion_res);
-                    fecha = myDialog.findViewById(R.id.fecha_creacion_res);
+                    txtclose =(TextView) myDialog.findViewById(R.id.txtclose_fav);
+                    titulo = myDialog.findViewById(R.id.titulo_popup_fav);
+                    contenido = myDialog.findViewById(R.id.desc_evento_fav);
+                    //hora = myDialog.findViewById(R.id.hora_creacion);
+                    fecha = myDialog.findViewById(R.id.fecha_creacion_fav);
 
                     Button btnFavorito = myDialog.findViewById(R.id.btn_fav);
                     Button btnReservado = myDialog.findViewById(R.id.btn_fav);

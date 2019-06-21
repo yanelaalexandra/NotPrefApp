@@ -38,7 +38,7 @@ public class Fragment_Reservas extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fragment__reservas, container, false);
 
         //codigo para el recycleview
-        actividadesList = view.findViewById(R.id.recyclerview_fav);
+        actividadesList = view.findViewById(R.id.recyclerview_res);
         actividadesList.setLayoutManager(new LinearLayoutManager(getContext()));
         actividadesList.setAdapter(new ActividadesAdapterRes());
 

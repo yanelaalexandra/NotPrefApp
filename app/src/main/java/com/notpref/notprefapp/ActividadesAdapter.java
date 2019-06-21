@@ -26,6 +26,7 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
 
 
     private List<Actividad> actividads;
+    ApiService service = ApiServiceGenerator.createService(ApiService.class);
     Context ctx;
 
     public ActividadesAdapter(){
@@ -36,13 +37,10 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
         this.actividads = productos;
     }
 
-
-
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView titulo_actividad, tipo_actividad;
         CardView cardView;
-
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -53,7 +51,7 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
         }
     }
 
-    ApiService service = ApiServiceGenerator.createService(ApiService.class);
+
 
     @NonNull
     @Override
@@ -67,7 +65,7 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ActividadesAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final ActividadesAdapter.ViewHolder viewHolder, int i) {
 
         final Actividad actividad = this.actividads.get(i);
         final Dialog myDialog;
@@ -82,7 +80,6 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
         final String fecha_creacion = actividad.getFechaEvento();
         final String hora_creacion = actividad.getHora();
         final String uuid = actividad.getId();
-
         if(actividad.getEvento().equals("true")){
 
 
@@ -122,7 +119,7 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
                     fecha = myDialog.findViewById(R.id.fecha_creacion);
 
                     Button btnFavorito = myDialog.findViewById(R.id.btn_fav);
-                    Button btnReservado = myDialog.findViewById(R.id.btn_fav);
+                    Button btnReservado = myDialog.findViewById(R.id.btn_reser);
 
                     txtclose.setText("X");
                     titulo.setText(titulo2);
@@ -140,12 +137,13 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
                             call.enqueue(new Callback<ResponseMessage>() {
                                 @Override
                                 public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
-
+                                    Toast.makeText(ctx, "Agregando...", Toast.LENGTH_SHORT).show();
                                 }
 
                                 @Override
                                 public void onFailure(Call<ResponseMessage> call, Throwable t) {
-
+                                    Toast.makeText(ctx, "Error...", Toast.LENGTH_SHORT).show();
+                                    Log.i("Error", t.toString());
                                 }
                             });
 
@@ -159,12 +157,13 @@ public class ActividadesAdapter extends RecyclerView.Adapter<ActividadesAdapter.
                             call.enqueue(new Callback<ResponseMessage>() {
                                 @Override
                                 public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
-
+                                    Toast.makeText(ctx, "Reservando...", Toast.LENGTH_SHORT).show();
                                 }
 
                                 @Override
                                 public void onFailure(Call<ResponseMessage> call, Throwable t) {
-
+                                    Toast.makeText(ctx, "Error...", Toast.LENGTH_SHORT).show();
+                                    Log.i("Error", t.toString());
                                 }
                             });
                         }

@@ -79,6 +79,18 @@
                 android:layout_margin="10dp"/>
 
             <TextView
+                android:id="@+id/lugar_creacion_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lugar"
+                android:textSize="18sp"
+                android:textColor="@color/icons"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_margin="10dp"/>
+
+
+            <TextView
                 android:id="@+id/hora_creacion_res"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
